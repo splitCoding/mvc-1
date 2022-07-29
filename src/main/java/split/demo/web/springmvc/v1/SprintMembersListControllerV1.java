@@ -15,7 +15,7 @@ public class SprintMembersListControllerV1 {
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @RequestMapping("/springmvc/v1/members")
-    public ModelAndView save(HttpServletRequest req, HttpServletResponse resp) {
+    public ModelAndView memberList(HttpServletRequest req, HttpServletResponse resp) {
         List<Member> members = memberRepository.findAll();
 
         ModelAndView mv = new ModelAndView("members");
